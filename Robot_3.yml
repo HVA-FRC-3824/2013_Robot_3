@@ -10,7 +10,7 @@ Children:
   - Name: Drivetrain
     Base: Subsystem
     Children:
-    - Name: 'Robot Drive '
+    - Name: Holonomic
       Base: Robot Drive 4
       Children:
       - Name: FrontRight
@@ -144,7 +144,7 @@ Children:
           name: Safety Expiration Time, validators: null, value: 0.1}
     Properties:
       Default Command: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Default Command, type: Command, validators: null, value: None}
+        name: Default Command, type: Command, validators: null, value: TeleopDrive}
   Properties: {}
 - Name: Operator Interface
   Base: OI
@@ -171,12 +171,12 @@ Children:
         name: Requires, type: Subsystem, validators: null, value: None}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
-  - Name: TelopDrive
+  - Name: TeleopDrive
     Base: Command
     Children: []
     Properties:
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
-        name: Requires, type: Subsystem, validators: null, value: None}
+        name: Requires, type: Subsystem, validators: null, value: Drivetrain}
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: true}
   Properties: {}

@@ -9,8 +9,8 @@
 // it from being updated in th future.
 
 
-#ifndef TELOPDRIVE_H
-#define TELOPDRIVE_H
+#ifndef TELEOPDRIVE_H
+#define TELEOPDRIVE_H
 
 
 #include "Commands/Subsystem.h"
@@ -21,9 +21,9 @@
  *
  * @author ExampleAuthor
  */
-class TelopDrive: public Command {
+class TeleopDrive: public Command {
 public:
-	TelopDrive();
+	TeleopDrive();
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();
